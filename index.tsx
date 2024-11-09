@@ -12,7 +12,7 @@ import { Logger } from "@utils/Logger";
 import { closeModal, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalRoot, ModalSize, openModal } from "@utils/modal";
 import definePlugin from "@utils/types";
 import { findByPropsLazy, findComponentByCodeLazy } from "@webpack";
-import { FluxDispatcher, GuildMemberStore, i18n, Menu, PresenceStore, ScrollerThin, Text, useEffect, UserStore, useStateFromStores } from "@webpack/common";
+import { FluxDispatcher, GuildMemberStore, Menu, PresenceStore, ScrollerThin, Text, useEffect, UserStore, useStateFromStores } from "@webpack/common";
 import { cl } from "plugins/memberCount";
 
 const logger = new Logger("showBoostCounts");
@@ -44,7 +44,6 @@ function MakeContextCallback(): NavContextMenuPatchCallback {
     return (children, props) => {
         const { guild } = props;
         if (!guild) return;
-        if (props.label === i18n.Messages.CHANNEL_ACTIONS_MENU_LABEL) return; // random shit like notification settings
 
         const lastChild = children.at(-1);
         if (lastChild?.key === "developer-actions") {
