@@ -6,8 +6,6 @@ Vencord plugin to show boosters for a server, and how many times they are boosti
 
 Can be used by right clicking a server, and selecting the `View Boosters` buttons in the context menu.
 
-⚠️ This only works for servers where you have enough permissions to access the server settings through the UI.
-
 # How to install 🔧
 
 If you don't know what you're doing, read [Vencord instructions on installing custom plugins](https://docs.vencord.dev/installing/custom-plugins/).
